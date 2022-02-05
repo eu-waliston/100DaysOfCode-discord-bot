@@ -1,0 +1,50 @@
+{
+  "name": "100-days-of-code-bot",
+  "version": "2.0.0",
+  "description": "A bot for tracking 100 Days of Code progress in Discord.",
+  "main": "./prod/index.js",
+  "scripts": {
+    "prebuild": "rm -rf ./prod",
+    "build": "tsc",
+    "lint": "eslint ./src",
+    "start": "node -r dotenv/config ./prod/index.js",
+    "test": "echo 'No tests yet'.",
+    "docs": "docsify serve ./docs -o --port 3200"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhcarrigan/100-days-of-code-bot.git"
+  },
+  "author": "Nicholas Carrigan",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/nhcarrigan/100-days-of-code-bot/issues"
+  },
+  "homepage": "https://github.com/nhcarrigan/100-days-of-code-bot#readme",
+  "engines": {
+    "node": "16.13.2",
+    "npm": "8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.21",
+    "@typescript-eslint/eslint-plugin": "5.10.1",
+    "@typescript-eslint/parser": "5.10.1",
+    "eslint": "8.7.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "prettier": "2.5.1",
+    "typescript": "4.5.5"
+  },
+  "dependencies": {
+    "@discordjs/builders": "0.12.0",
+    "@discordjs/rest": "0.3.0",
+    "@sentry/integrations": "6.16.1",
+    "@sentry/node": "6.16.1",
+    "discord-api-types": "0.26.1",
+    "discord.js": "13.6.0",
+    "docsify-cli": "4.4.3",
+    "dotenv": "14.3.2",
+    "mongoose": "6.1.8",
+    "winston": "3.5.0"
+  }
+}
